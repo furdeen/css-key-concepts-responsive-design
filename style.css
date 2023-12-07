@@ -1,20 +1,83 @@
 :root {
-    --coral: #F05D5E;
-    --teal: #0F7173;
-    --light: #E7ECEF;
+    --coral: #f05d5e;
+    --teal: #0f7173;
+    --light: #e7ecef;
     --dark: #272932;
-    --camel: #D8A47F;
+    --camel: #d8a47f;
+    --gray: #f6f4f5f;
+  }
+  
+  .header {
+    font-size: 2.25rem;
+  }
+
+
+  @font-face {
+    font-family: 'EgyptianFont';
+    src: url('path/to/egyptian-font.woff2') format('woff2'),
+         url('path/to/egyptian-font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-body {
-    background-color: var(--light);
-}
+  
+  body {
+      font-family: 'EgyptianFont';
+    font-size: 1rem;
 
-.card {
+        background-image: url('https://cdn.mos.cms.futurecdn.net/7YrobQvFFzw8aWsAUtoYXB-970-80.jpg.webp');
+        background-size: cover;
+        background-repeat:no-repeat;
+
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .card {
+    border: 3px solid;
+    border-color: var(--dark);
+    border-radius: 5px;
+    box-shadow: 3px 3px var(--dark);
+    color: var(--dark);
     padding: 10px;
     margin: 10px;
-}
-
-img {
-    width: 250px;
-}
+  }
+  
+  .description {
+    display: none;
+  }
+  
+  img {
+    width: 22vw;
+  }
+  
+  .navbar-container {
+    display: flex;
+    flex-direction: column;
+  }
+  @media only screen and (min-width: 1000px) {
+    body {
+      font-size: 2rem;
+    }
+    .description {
+      display: block;
+    }
+    .navbar-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .navbar-item {
+      padding: 10px;
+      margin: 10px;
+    }
+  }
+  @media only screen and (min-width: 700px) and (max-width: 999px) {
+    body {
+      font-size: 1.5rem;
+    }
+  }
+  
